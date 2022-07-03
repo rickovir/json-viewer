@@ -1,0 +1,28 @@
+.tab-header {
+    border-bottom: 1px solid #d3dde5;
+}
+
+.tab-header button {
+    font-family: 'Montserrat', sans-serif;
+    background: #d3dde5;
+    border: 1px solid #d3dde5;
+    outline: none;
+    margin-bottom: -1px;
+    margin-left: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    color: #31353a;
+    font-weight: 500;
+}
+
+.tab-header button:hover {
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+    border-bottom: 1px solid #d3dde5;
+}
+
+.tab-header button.active {
+    background: #ffffff;
+    border: 1px solid #d3dde5;
+}
