@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './StringSection.css';
 
-const StringSection = () => {
+const StringSection = ({ onSetValue }) => {
     const [textareaHeight, setTextareaHeight] = useState(0);
-    const [stringVal, setStringVal] = useState('');
     useEffect(() => {
         getTextareaHeight();
     });
@@ -15,11 +14,10 @@ const StringSection = () => {
     };
     return (
         <div className="string-section">
-            <textarea style={{height: textareaHeight, width: '100%', resize: 'none'}} onChange={(e) => setStringVal(e.target.value)}></textarea>
-        
-            <pre>
-                { stringVal }
-            </pre>
+            <textarea 
+                style={{height: textareaHeight, width: '100%', resize: 'none'}} 
+                onChange={(e) => onSetValue(e.target.value)}>
+            </textarea>
         </div>
     );
 };
