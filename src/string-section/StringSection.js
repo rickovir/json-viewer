@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from "react";
 import './StringSection.css';
 
-const StringSection = ({ onSetValue }) => {
-    const [textareaHeight, setTextareaHeight] = useState(0);
-    useEffect(() => {
-        getTextareaHeight();
-    });
-    const getTextareaHeight = () => {
-        const offsetTop = document.querySelector('.string-section textarea')?.offsetTop;
-        const windowHeight = window.innerHeight;
+const StringSection = ({setRaw}) => {
+    const [strText, setStrText] = useState('');
 
-        setTextareaHeight((windowHeight - ((offsetTop ? offsetTop : 0) + 10)) + 'px');
+    const onSetValue = (val) => {
+        setRaw( val );
+        setStrText( strText );
     };
+
     return (
         <div className="string-section">
-            <textarea 
-                style={{height: textareaHeight, width: '100%', resize: 'none'}} 
-                onChange={(e) => onSetValue(e.target.value)}>
+            <textarea onChange={(e) => onSetValue(e.target.value)} defaultValue={ strText }>
             </textarea>
         </div>
     );

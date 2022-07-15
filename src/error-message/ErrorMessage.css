@@ -1,0 +1,12 @@
+.error-message {
+    background-color: #F32013;
+    border: 1px solid #CA0B00;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.error-message span {
+    color: #FFFFFF;
+}
